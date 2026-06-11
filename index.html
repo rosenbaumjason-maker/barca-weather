@@ -126,33 +126,20 @@
   .player-card:hover { background: rgba(255,255,255,0.05); }
 
   .player-avatar {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    font-weight: 900;
-    font-family: 'Oswald', sans-serif;
     border: 2px solid var(--barca-gold);
     flex-shrink: 0;
-    position: relative;
     overflow: hidden;
+    background: var(--barca-dark);
   }
 
-  .player-avatar.yamal {
-    background: linear-gradient(135deg, var(--barca-red), var(--barca-blue));
-  }
-
-  .player-avatar.pedri {
-    background: linear-gradient(135deg, var(--barca-blue), var(--barca-red));
-  }
-
-  .player-avatar .jersey-num {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--barca-gold);
+  .player-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
   }
 
   .player-info .player-name {
@@ -494,25 +481,7 @@
   <div class="header-stripes"></div>
   <div class="header-inner">
 
-    <!-- Simplified Barça Crest SVG -->
-    <svg class="crest" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-      <!-- Shield shape -->
-      <path d="M40 88 C40 88 4 68 4 36 L4 8 L76 8 L76 36 C76 68 40 88 40 88Z" fill="#004D98" stroke="#EDBB00" stroke-width="2"/>
-      <!-- Top left red -->
-      <path d="M4 8 L40 8 L40 32 C28 32 4 24 4 8Z" fill="#A50044"/>
-      <!-- Top right red -->
-      <path d="M40 8 L76 8 C76 24 52 32 40 32 L40 8Z" fill="#A50044"/>
-      <!-- Cross pattern -->
-      <rect x="35" y="8" width="10" height="72" fill="rgba(237,187,0,0.25)" rx="2"/>
-      <rect x="4" y="34" width="72" height="10" fill="rgba(237,187,0,0.25)" rx="2"/>
-      <!-- Stripes bottom area -->
-      <path d="M12 52 L12 62 L20 66 L20 56Z" fill="#A50044" opacity="0.7"/>
-      <path d="M28 56 L28 70 L36 74 L36 60Z" fill="#A50044" opacity="0.7"/>
-      <path d="M44 60 L44 74 L52 70 L52 56Z" fill="#A50044" opacity="0.7"/>
-      <path d="M60 56 L60 66 L68 62 L68 52Z" fill="#A50044" opacity="0.7"/>
-      <!-- FCB letters -->
-      <text x="40" y="50" text-anchor="middle" font-family="'Oswald', sans-serif" font-size="11" font-weight="700" fill="#EDBB00">FCB</text>
-    </svg>
+    <img class="crest" src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="FC Barcelona Crest">
 
     <div class="header-title">
       <h1>
@@ -534,7 +503,7 @@
 
   <div class="player-card">
     <div class="player-avatar yamal">
-      <span class="jersey-num">19</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Lamine_Yamal_in_2025.jpg/250px-Lamine_Yamal_in_2025.jpg" alt="Lamine Yamal">
     </div>
     <div class="player-info">
       <div class="player-name">Lamine Yamal</div>
@@ -545,7 +514,7 @@
 
   <div class="player-card">
     <div class="player-avatar pedri">
-      <span class="jersey-num">8</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Pedri.jpg/250px-Pedri.jpg" alt="Pedri">
     </div>
     <div class="player-info">
       <div class="player-name">Pedri</div>
