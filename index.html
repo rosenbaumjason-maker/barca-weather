@@ -688,6 +688,20 @@
     document.querySelector('.current-desc').textContent = msg;
   }
 
+  function setError(msg) {
+    const html = `
+      <div style="padding:20px;text-align:center;grid-column:1/-1;">
+        <div style="font-size:2rem;margin-bottom:8px;">⚠️</div>
+        <div style="color:#ff6b6b;font-weight:600;margin-bottom:6px;">${msg}</div>
+        <div style="opacity:0.5;font-size:0.8rem;margin-bottom:14px;">The weather service may be temporarily down.</div>
+        <button onclick="loadWeather()" style="background:var(--barca-gold);color:var(--barca-dark);border:none;padding:10px 24px;border-radius:6px;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;cursor:pointer;">⟳ RETRY</button>
+      </div>`;
+    document.getElementById('hourlyStrip').innerHTML = html;
+    document.getElementById('tenDayGrid').innerHTML  = html;
+    document.querySelector('.current-temp').textContent = '—';
+    document.querySelector('.current-desc').textContent = 'Weather unavailable';
+  }
+
   function updateHeader(timeStr) {
     const d = new Date(timeStr);
     const dateOpts = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -810,8 +824,7 @@
       renderTenDay(data.daily);
       updateHeader(data.current.time);
     } catch (err) {
-      document.getElementById('hourlyStrip').innerHTML = `<div style="padding:20px;color:#ff6b6b;">Failed to load weather: ${err.message}</div>`;
-      document.getElementById('tenDayGrid').innerHTML  = `<div style="padding:20px;color:#ff6b6b;grid-column:1/-1;">Check your internet connection and reload.</div>`;
+      setError(`Failed to load weather: ${err.message}`);
     }
   }
 
