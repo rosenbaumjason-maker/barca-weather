@@ -363,6 +363,54 @@
   @media (max-width: 900px) { .ten-day-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 600px) { .ten-day-grid { grid-template-columns: repeat(2, 1fr); } }
 
+  /* ── MOBILE ── */
+  @media (max-width: 480px) {
+    .header-inner {
+      padding: 12px 16px;
+      gap: 8px;
+    }
+    .crest { width: 52px; height: 58px; }
+    .header-title h1 { font-size: 1.3rem; letter-spacing: 1px; }
+    .header-title .subtitle { font-size: 0.62rem; letter-spacing: 2px; }
+    .header-right { display: none; }
+
+    .players-bar { padding: 0 12px; flex-direction: column; }
+    .player-card { padding: 10px 8px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); gap: 10px; }
+    .player-card:last-child { border-bottom: none; }
+    .player-avatar { width: 46px; height: 46px; }
+    .player-info .player-name { font-size: 0.9rem; }
+    .player-info .player-pos { font-size: 0.62rem; }
+    .player-quote { font-size: 0.72rem; max-width: 100%; }
+
+    .dashboard { padding: 16px 12px; gap: 16px; }
+
+    .current-panel { padding: 16px; gap: 16px; }
+    .current-main { gap: 12px; flex: 1 1 100%; }
+    .current-icon { font-size: 3.5rem; }
+    .current-temp { font-size: 3.2rem; }
+    .current-desc { font-size: 0.85rem; letter-spacing: 1px; }
+    .current-loc { font-size: 0.65rem; letter-spacing: 1px; }
+    .current-stats { flex: 1 1 100%; gap: 8px; }
+    .stat-box { padding: 8px 12px; }
+    .stat-value { font-size: 1.1rem; }
+
+    .section-heading { font-size: 0.85rem; letter-spacing: 2px; }
+
+    .hour-card { min-width: 60px; padding: 10px 8px; }
+    .hour-icon { font-size: 1.2rem; }
+    .hour-temp { font-size: 0.9rem; }
+
+    .ten-day-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .day-card { padding: 12px 10px; }
+    .day-icon { font-size: 1.8rem; }
+    .day-high { font-size: 1.2rem; }
+    .day-low { font-size: 0.95rem; }
+    .day-desc { font-size: 0.68rem; }
+    .day-meta { font-size: 0.6rem; }
+
+    footer { font-size: 0.6rem; padding: 14px 12px; }
+  }
+
   .day-card {
     background: rgba(0,31,63,0.7);
     border: 1px solid rgba(255,255,255,0.1);
